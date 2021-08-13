@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Products</title>
+</head>
+<body>
+    <nav class="fixed-top">
+        <h3 class="nav-title">Add Product:</h3>
+        <form onsubmit="enterProduct(); return false" class="mb-3" id="productEntryForm">
+            <input type="text" class="form-control" name="product" id="productEntry" placeholder="Product Name">
+            <input type="number" name="price" class="form-control" id="priceEntry" placeholder="Price ($)">
+            <select name="category" class="form-control" id="categoryEntry">
+                <option class="category" selected>Category</option>
+                <option value="Drinks">Drinks</option>
+                <option value="Meat">Meat</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Basic">Basic</option>
+            </select>
+            <input type="url" name="image" class="form-control" id="imgEntry" placeholder="Image Link">
+            
+            <input type="submit" name="submit" class=" btn btn-danger" value="Add Product">
+            
+        </form>        
+    </nav>
+    
+    <div id="displayProducts" class="displayProds"></div>   
+    
+</body>
+</html>
